@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milithi Nethmini | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- ENHANCED LOADING SCREEN -->
+    <div id="loadingScreen">
+        <div class="loader-content">
+            <div class="loader-wrapper">
+                <div class="profile-circle">
+                    <img src="profile.jpg" alt="Profile" class="profile-image">
+                    <div class="circle-border"></div>
+                </div>
+                <div class="loader-ring"></div>
+            </div>
+            <h2 class="loader-name">Milithi Nethmini</h2>
+            <p class="loader-subtitle">Software Engineering Undergraduate</p>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <div id="scrollProgressBar"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div id="particles-js"></div>
+
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon"><i class="fas fa-code"></i></div>
+            <div class="logo-text">
+                <span class="main-title">Milithi Nethmini</span>
+                <span class="sub-title">Software Engineering Undergraduate | Tech Enthusiast</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#timeline" class="nav-item">Timeline</a></li>
+            <li><a href="#achievements" class="nav-item">Achievements</a></li>
+            <li><a href="#certificates" class="nav-item">Certificates</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <a href="#contact" class="nav-btn">Get In Touch</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="900">
+            <h3>Hello, I am</h3>
+            <h1>Milithi Nethmini</h1>
+            <p class="typing-text">I am a <span id="element" style="color:#a855f7;font-weight:600;"></span></p>
+            <p class="hero-description">An enthusiastic Software Engineering undergraduate passionate about crafting innovative web experiences, solving complex problems, and transforming creative ideas into powerful digital solutions.</p>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/milithi-nethmini-chandrasiri-3695793ab" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/milithinethmini" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:milithi.5656@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <button onclick="downloadCV()" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</button>
+                <a href="#projects" class="btn btn-outline">View My Work</a>
+            </div>
+        </div>
+        <div class="hero-img-container" data-aos="fade-left" data-aos-duration="900">
+            <div class="hero-img-ring ring-outer"></div>
+            <div class="hero-img-ring ring-inner"></div>
+            <div class="hero-img"><img src="profile.jpg" alt="Milithi Nethmini"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <h2 data-aos="fade-up">About Me</h2>
+        <div class="about-container">
+            <div class="about-left" data-aos="fade-right" data-aos-duration="800">
+                <div class="about-text-box">
+                    <p>I am an enthusiastic and highly motivated IT undergraduate pursuing my studies in Software Engineering at the Faculty of Computing and IT, SLTC Research University. I have a strong passion for exploring emerging technologies, tackling logical problems, and developing clean, user-friendly software applications.</p>
+                </div>
+                <div class="personal-info-grid">
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Sri Lanka</p></div></div>
+                    <div class="info-item"><i class="fas fa-university"></i><div><h4>University</h4><p>SLTC University</p></div></div>
+                    <div class="info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>milithi.5656@gmail.com</p></div></div>
+                    <div class="info-item"><i class="fas fa-user-clock"></i><div><h4>Status</h4><p>Available</p></div></div>
+                </div>
+            </div>
+            <div class="about-right" data-aos="fade-left" data-aos-duration="800">
+                <div class="education-box">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="edu-item">
+                        <h4>BSc (Hons) in Software Engineering</h4>
+                        <p>SLTC Research University</p>
+                        <p class="date">Faculty of Computing and IT | Ongoing</p>
+                    </div>
+                </div>
+                <div class="extra-box">
+                    <h3><i class="fas fa-star"></i> Interests & Strengths</h3>
+                    <ul class="strengths-list">
+                        <li><i class="fas fa-check-circle"></i> Full-Stack Web Development</li>
+                        <li><i class="fas fa-check-circle"></i> Object-Oriented Programming</li>
+                        <li><i class="fas fa-check-circle"></i> UI/UX Design Layouts</li>
+                        <li><i class="fas fa-check-circle"></i> Adaptive Learning Methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+        <h2 data-aos="fade-up">My Skills</h2>
+        <div class="mn-services-container">
+            <div class="mn-card active-purple" onclick="setActiveCard(this,'purple')" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+                <div class="mn-icon-box box-purple"><i class="fab fa-html5"></i></div>
+                <h3>Web Development</h3>
+                <p>Custom web applications built with HTML5, CSS3, JavaScript, and framework technologies. I focus on fast, interactive, and beautifully responsive solutions.</p>
+                <ul class="mn-features-list">
+                    <li><i class="fas fa-check"></i> Clean & Structured Layouts</li>
+                    <li><i class="fas fa-check"></i> Responsive Layout Systems</li>
+                    <li><i class="fas fa-check"></i> Performance Optimization</li>
+                </ul>
+                <div class="mn-progress-wrapper">
+                    <div class="mn-progress-details"><span>Expertise</span><span>85%</span></div>
+                    <div class="mn-progress-track"><div class="mn-progress-fill skill-bar" data-width="85" style="background:#a855f7;width:0%;"></div></div>
+                </div>
+            </div>
+            <div class="mn-card" onclick="setActiveCard(this,'blue')" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+                <div class="mn-icon-box box-blue"><i class="fab fa-java"></i></div>
+                <h3>Java / OOP</h3>
+                <p>Developing structural logic systems and object-oriented architectures leveraging clean patterns, algorithms, and core framework processes.</p>
+                <ul class="mn-features-list">
+                    <li><i class="fas fa-check"></i> Structural OOP Modeling</li>
+                    <li><i class="fas fa-check"></i> Logic Control Architectures</li>
+                    <li><i class="fas fa-check"></i> Code Testing & Debugging</li>
+                </ul>
+                <div class="mn-progress-wrapper">
+                    <div class="mn-progress-details"><span>Expertise</span><span>70%</span></div>
+                    <div class="mn-progress-track"><div class="mn-progress-fill skill-bar" data-width="70" style="background:#3b82f6;width:0%;"></div></div>
+                </div>
+            </div>
+            <div class="mn-card" onclick="setActiveCard(this,'indigo')" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+                <div class="mn-icon-box box-indigo"><i class="fab fa-python"></i></div>
+                <h3>Python Coding</h3>
+                <p>Building computing scripts, exploring mathematical processing algorithms, and structuring modular calculations smoothly using Python frameworks.</p>
+                <ul class="mn-features-list">
+                    <li><i class="fas fa-check"></i> Data Architecture Scripting</li>
+                    <li><i class="fas fa-check"></i> Algorithm Problem Tracing</li>
+                    <li><i class="fas fa-check"></i> Automation Module Flows</li>
+                </ul>
+                <div class="mn-progress-wrapper">
+                    <div class="mn-progress-details"><span>Expertise</span><span>65%</span></div>
+                    <div class="mn-progress-track"><div class="mn-progress-fill skill-bar" data-width="65" style="background:#6366f1;width:0%;"></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Radar Chart -->
+        <div class="radar-container" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="radar-title">Skills Radar</h3>
+            <div class="radar-wrapper">
+                <canvas id="skillsRadar"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="timeline-section">
+        <h2 data-aos="fade-up">My Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item left" data-aos="fade-right" data-aos-duration="700">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">2023</span>
+                    <h3>A/L Completed</h3>
+                    <p>Successfully completed Advanced Level examinations with a focus on Technology stream, building a foundation for engineering studies.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left" data-aos-duration="700">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">2025</span>
+                    <h3>University Enrollment</h3>
+                    <p>Enrolled at SLTC Research University to pursue BSc (Hons) in Software Engineering — Faculty of Computing and IT.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right" data-aos-duration="700">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">2025</span>
+                    <h3>Started Web Development</h3>
+                    <p>Began learning HTML, CSS, and JavaScript in depth. Built first web projects and explored responsive design patterns.</p>
+                </div>
+            </div>
+            <div class="timeline-item right" data-aos="fade-left" data-aos-duration="700">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="timeline-date">2026</span>
+                    <h3>Advanced Projects & OOP</h3>
+                    <p>Deepened Java OOP skills, explored Python scripting, and started building full-featured web applications with animations and UI/UX focus.</p>
+                </div>
+            </div>
+            <div class="timeline-item left" data-aos="fade-right" data-aos-duration="700">
+                <div class="timeline-dot active-dot"></div>
+                <div class="timeline-card active-card">
+                    <span class="timeline-date">2026 — Now</span>
+                    <h3>Portfolio & AI Integration</h3>
+                    <p>Built this AI-powered personal portfolio. Currently expanding into full-stack development, APIs, and modern frameworks. 🚀</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="achievements-section">
+        <h2 data-aos="fade-up">Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+                <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>BSc Software Engineering</h3>
+                <p>Currently pursuing an Honours degree at SLTC Research University, Faculty of Computing and IT.</p>
+                <span class="achievement-badge ongoing">Ongoing</span>
+            </div>
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+                <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Portfolio Website Development</h3>
+                <p>Designed and developed a full personal portfolio website with AI chatbot, animations, radar chart, timeline, and GitHub stats.</p>
+                <span class="achievement-badge completed">Completed</span>
+            </div>
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+                <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Professional Certifications & Leadership</h3>
+                <p>Earned multiple certifications including AI for Social Impact and Python for Beginners. Active as Financial Team Member in CodeMania IEEE Computer Society Student Branch, showcasing leadership and event management skills.</p>
+                <span class="achievement-badge ongoing">Active</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="certificates-section">
+        <h2 data-aos="fade-up">My Certifications</h2>
+        <p class="certificates-subtitle" data-aos="fade-up" data-aos-delay="100">Professional certifications and recognitions from industry-leading organizations</p>
+        <div class="certificates-grid">
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+                <div class="cert-header">
+                    <div class="cert-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(99,102,241,0.2));color:#a855f7;"><i class="fas fa-brain"></i></div>
+                    <span class="cert-date">Completed</span>
+                </div>
+                <h3>Artificial Intelligence (AI) for Social Impact</h3>
+                <p class="cert-issuer">🏢 ADBI Institute</p>
+                <p class="cert-description">Advanced certification program focused on artificial intelligence applications and their positive social impact. Explored AI tools, machine learning fundamentals, and real-world implementation strategies.</p>
+                <div class="cert-tags">
+                    <span>Artificial Intelligence</span>
+                    <span>Machine Learning</span>
+                    <span>Social Impact</span>
+                    <span>Technology Innovation</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+                <div class="cert-header">
+                    <div class="cert-icon" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(168,85,247,0.2));color:#3b82f6;"><i class="fas fa-python"></i></div>
+                    <span class="cert-date">Completed</span>
+                </div>
+                <h3>Python for Beginners</h3>
+                <p class="cert-issuer">🎓 CODL - University of Moratuwa, Sri Lanka</p>
+                <p class="cert-description">Comprehensive Python fundamentals course covering syntax, data structures, functions, and basic programming concepts. Strong foundation in one of the most versatile programming languages used in web development, AI, and data science.</p>
+                <div class="cert-tags">
+                    <span>Python</span>
+                    <span>Programming</span>
+                    <span>Web Development</span>
+                    <span>Fundamentals</span>
+                </div>
+            </div>
+            
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+                <div class="cert-header">
+                    <div class="cert-icon" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(168,85,247,0.2));color:#6366f1;"><i class="fas fa-users"></i></div>
+                    <span class="cert-date">Participated</span>
+                </div>
+                <h3>Financial Team Member Organizing Committee</h3>
+                <p class="cert-issuer">📊 CodeMania | IEEE Computer Society Student Branch - SLTC</p>
+                <p class="cert-description">Participated member of the organizing committee for CodeMania, SLTC's premier coding competition. Serving as Financial Team Member, responsible for budget planning, resource allocation, and ensuring successful event execution. Gained valuable experience in event management and team coordination.</p>
+                <div class="cert-tags">
+                    <span>Leadership</span>
+                    <span>Event Management</span>
+                    <span>IEEE</span>
+                    <span>Team Coordination</span>
+                    <span>Financial Planning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+                <span class="status completed">Completed</span>
+                <h3><i class="fas fa-user-circle"></i> Personal Portfolio Website</h3>
+                <p>A fully responsive personal portfolio website featuring an AI chatbot, particle animations, dark/light mode toggle, scroll animations, animated skill bars, radar chart, timeline, and GitHub stats integration.</p>
+                <div class="project-tech">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Particles.js</span><span>Typed.js</span><span>Chart.js</span>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+                <span class="status">Coming Soon</span>
+                <h3><i class="fas fa-rocket"></i> More Projects</h3>
+                <p>Currently focused on building a strong academic foundation. Exciting new projects will be added here as I progress through my Software Engineering degree.</p>
+                <div class="project-tech"><span>Stay Tuned</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Let's connect! Feel free to reach out to me through my professional profiles or drop a message below.</p>
+        <div class="contact-container" data-aos="fade-up" data-aos-delay="200">
+            <form class="contact-form" id="contactForm">
+                <div class="input-group"><input type="text" placeholder="Your Name" required></div>
+                <div class="input-group"><input type="email" placeholder="Your Email" required></div>
+                <div class="input-group"><textarea placeholder="Your Message" rows="5" required></textarea></div>
+                <button type="submit" class="btn submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                <p class="form-note" id="formNote"></p>
+            </form>
+            <div class="social-box">
+                <h3>Connect via</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/milithi-nethmini-chandrasiri-3695793ab" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/milithinethmini" target="_blank" class="social-icon"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-wrap" id="chatbot">
+        <div class="chatbot-topbar">
+            <div class="chatbot-topbar-left">
+                <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                <div>
+                    <p class="chatbot-title">Milithi's Assistant</p>
+                    <p class="chatbot-status"><span class="chatbot-dot"></span> Online</p>
+                </div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-chips">
+            <button onclick="quickReply('What are your skills?')">💻 Skills</button>
+            <button onclick="quickReply('Tell me about your education')">🎓 Education</button>
+            <button onclick="quickReply('What projects have you built?')">🚀 Projects</button>
+            <button onclick="quickReply('How can I contact you?')">📬 Contact</button>
+        </div>
+        <div class="chatbot-body" id="chatMessages">
+            <div class="cb-msg cb-ai">
+                <div class="cb-bubble">👋 Hi! I'm Milithi's AI Assistant. Ask me anything about her skills, education, projects, or how to get in touch!</div>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="userInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button class="cb-send-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button class="chatbot-fab" onclick="toggleChatbot()" id="chatFab">
+        <i class="fas fa-comments" id="fabIcon"></i>
+    </button>
+
+    <footer><p>&copy; 2026 Milithi Nethmini. All Rights Reserved.</p></footer>
+
+<script>
+// ═══════════════ LOADING SCREEN ═══════════════
+window.addEventListener('load', function () {
+    var fill = document.querySelector('.loader-fill');
+    var w = 0;
+    var iv = setInterval(function () {
+        w += 2; fill.style.width = w + '%';
+        if (w >= 100) {
+            clearInterval(iv);
+            setTimeout(function () {
+                var ls = document.getElementById('loadingScreen');
+                ls.style.opacity = '0'; 
+                ls.style.transition = 'opacity 0.6s ease-out'; 
+                setTimeout(function () { ls.style.display = 'none'; }, 600);
+            }, 500);
+        }
+    }, 20);
+});
+
+AOS.init({ once: true, offset: 80 });
+
+// ═══════════════ SCROLL PROGRESS ═══════════════
+window.addEventListener('scroll', function () {
+    var s = document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('scrollProgressBar').style.width = (s / h * 100) + '%';
+    document.getElementById('backToTop').classList.toggle('visible', s > 400);
+});
+
+// ═══════════════ CURSOR ═══════════════
+var cursor = document.getElementById('cursor'), cursorDot = document.getElementById('cursorDot');
+document.addEventListener('mousemove', function (e) {
+    cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px';
+    cursorDot.style.left = e.clientX + 'px'; cursorDot.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a,button,.mn-card,.project-card,.achievement-card,.cert-card').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { cursor.classList.add('cursor-hover'); });
+    el.addEventListener('mouseleave', function () { cursor.classList.remove('cursor-hover'); });
+});
+document.addEventListener('mousemove', function (e) {
+    var t = document.createElement('div'); t.className = 'trail';
+    t.style.left = e.clientX + 'px'; t.style.top = e.clientY + 'px';
+    document.body.appendChild(t);
+    setTimeout(function () { t.style.opacity='0'; t.style.transform='translate(-50%,-50%) scale(0.2)'; setTimeout(function(){t.remove();},600); }, 50);
+});
+
+// ═══════════════ THEME ═══════════════
+var themeIcon = document.getElementById('themeIcon');
+var currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+themeIcon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+document.getElementById('themeToggle').addEventListener('click', function () {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', currentTheme);
+    if (radarChart) updateRadarColors();
+});
+
+// ═══════════════ NAV ACTIVE ═══════════════
+document.querySelectorAll('section').forEach(function (s) {
+    new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting)
+                document.querySelectorAll('.nav-item').forEach(function (i) {
+                    i.classList.toggle('active', i.getAttribute('href') === '#' + e.target.id);
+                });
+        });
+    }, { threshold: 0.4 }).observe(s);
+});
+
+// ═══════════════ SKILL CARDS ═══════════════
+function setActiveCard(el, color) {
+    document.querySelectorAll('.mn-card').forEach(function (c) { c.classList.remove('active-purple','active-blue','active-indigo'); });
+    el.classList.add('active-' + color);
+}
+new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting)
+            entry.target.querySelectorAll('.skill-bar').forEach(function (bar) {
+                setTimeout(function () { bar.style.transition='width 1.2s ease'; bar.style.width=bar.getAttribute('data-width')+'%'; }, 200);
+            });
+    });
+}, { threshold: 0.3 }).observe(document.querySelector('.mn-services-container'));
+
+// ═══════════════ RADAR CHART ═══════════════
+var radarChart = null;
+function getRadarColors() {
+    var d = document.documentElement.getAttribute('data-theme') !== 'light';
+    return { gridColor: d?'rgba(255,255,255,0.1)':'rgba(0,0,0,0.1)', tickColor: d?'rgba(255,255,255,0.6)':'rgba(0,0,0,0.6)', pointLabel: d?'#f8fafc':'#0f172a' };
+}
+function updateRadarColors() {
+    var c = getRadarColors();
+    radarChart.options.scales.r.grid.color = c.gridColor;
+    radarChart.options.scales.r.ticks.color = c.tickColor;
+    radarChart.options.scales.r.pointLabels.color = c.pointLabel;
+    radarChart.update();
+}
+new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting && !radarChart) {
+        var c = getRadarColors();
+        radarChart = new Chart(document.getElementById('skillsRadar').getContext('2d'), {
+            type: 'radar',
+            data: {
+                labels: ['HTML/CSS','JavaScript','Java/OOP','Python','UI/UX','Git'],
+                datasets: [{ label:'Skill Level', data:[90,80,70,65,75,70], backgroundColor:'rgba(168,85,247,0.2)', borderColor:'#a855f7', pointBackgroundColor:'#a855f7', pointBorderColor:'#fff', pointHoverBackgroundColor:'#fff', pointHoverBorderColor:'#a855f7', borderWidth:2, pointRadius:5 }]
+            },
+            options: {
+                responsive:true, animation:{ duration:1500, easing:'easeInOutQuart' },
+                scales: { r: { angleLines:{color:'rgba(168,85,247,0.2)'}, grid:{color:c.gridColor}, ticks:{backdropColor:'transparent',color:c.tickColor,stepSize:20,font:{size:11}}, pointLabels:{color:c.pointLabel,font:{size:13,weight:'600'}}, min:0, max:100 } },
+                plugins: { legend:{display:false} }
+            }
+        });
+    }
+}, { threshold: 0.3 }).observe(document.getElementById('skillsRadar'));
+
+// ═══════════════ TYPED.JS ═══════════════
+new Typed('#element', { strings:['Software Engineering Undergraduate.','Tech Enthusiast.','Web Developer.','Future Full-Stack Developer.'], typeSpeed:60, backSpeed:40, loop:true });
+
+// ═══════════════ PARTICLES ═══════════════
+particlesJS('particles-js', {
+    particles:{ number:{value:80,density:{enable:true,value_area:800}}, color:{value:'#ffffff'}, shape:{type:'circle'}, opacity:{value:0.5}, size:{value:3,random:true}, line_linked:{enable:true,distance:150,color:'#a855f7',opacity:0.4,width:1}, move:{enable:true,speed:2,out_mode:'out'} },
+    interactivity:{ detect_on:'canvas', events:{onhover:{enable:true,mode:'repulse'},onclick:{enable:true,mode:'push'},resize:true} }, retina_detect:true
+});
+
+// ═══════════════ CONTACT FORM ═══════════════
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var note = document.getElementById('formNote');
+    note.style.color='#a855f7'; note.innerText='Message received! I will get back to you soon.';
+    this.reset();
+    setTimeout(function(){note.innerText='';},4000);
+});
+
+// ═══════════════ AI CHATBOT — SMART RULE-BASED ═══════════════
+var chatOpen = false;
+
+// ── Knowledge Base ──
+var KB = [
+    {
+        keys: ['skill','skills','know','language','tech','stack','html','css','javascript','java','python'],
+        answer: "💻 Milithi has a great set of skills!\n\n🔹 HTML5 & CSS3 — 90%\n🔹 JavaScript — 80%\n🔹 Java / OOP — 70%\n🔹 Python — 65%\n🔹 UI/UX Design — 75%\n🔹 Git — 70%\n\nShe's especially passionate about web development and building beautiful, responsive interfaces! 🌐"
+    },
+    {
+        keys: ['education','university','study','degree','sltc','bsc','college','school','al','a/l','advanced level'],
+        answer: "🎓 Milithi's educational journey:\n\n📌 A/L — Completed in 2023 (Technology Stream)\n📌 BSc (Hons) in Software Engineering — Currently pursuing at SLTC Research University, Faculty of Computing and IT 🏛️\n\nShe's a dedicated student with a passion for technology and innovation!"
+    },
+    {
+        keys: ['project','projects','built','build','work','portfolio','website'],
+        answer: "🚀 Milithi's Projects:\n\n✅ Personal Portfolio Website — A fully responsive portfolio with AI chatbot, particle animations, dark/light mode, skills radar chart, animated timeline, and more!\n\nTech used: HTML5, CSS3, JavaScript, Particles.js, Typed.js, Chart.js\n\n🔜 More exciting projects are coming soon as she progresses through her degree! Stay tuned! 🌟"
+    },
+    {
+        keys: ['certificate','certification','certifications','cert','adbi','award','python','codemania','ieee'],
+        answer: "🏆 Milithi's Certifications & Achievements:\n\n✅ Artificial Intelligence (AI) for Social Impact — ADBI Institute (Completed)\n✅ Python for Beginners — CODL, University of Moratuwa, Sri Lanka (Completed)\n✅ Financial Team Member & Organizing Committee — CodeMania IEEE Computer Society Student Branch, SLTC (Active)\n\nShe's actively involved in leadership roles and continuously expanding her technical skills through recognized programs! Check her Certificates section for more details! 📜"
+    },
+    {
+        keys: ['contact','email','reach','connect','linkedin','github','message','touch'],
+        answer: "📬 You can reach Milithi through:\n\n📧 Email: milithi.5656@gmail.com\n💼 LinkedIn: Milithi Nethmini Chandrasiri\n🐱 GitHub: @milithinethmini\n\nOr use the Contact Form on this page — she'd love to hear from you! 😊"
+    },
+    {
+        keys: ['about','who','tell me about','introduce','background','yourself','she'],
+        answer: "👩‍💻 About Milithi Nethmini:\n\nShe's an enthusiastic Software Engineering undergraduate from Sri Lanka 🇱🇰, studying at SLTC Research University.\n\nShe's passionate about:\n✨ Full-Stack Web Development\n✨ Object-Oriented Programming\n✨ UI/UX Design\n✨ Solving complex problems with creative solutions\n\nShe's motivated, always learning, and ready to build the future! 🚀"
+    },
+    {
+        keys: ['achievement','achieve','award','accomplishment'],
+        answer: "🏆 Milithi's Achievements:\n\n🎓 Pursuing BSc (Hons) in Software Engineering at SLTC University\n💻 Built a full-featured personal portfolio with AI chatbot & animations\n🎖️ Earned professional certifications in AI and technology\n📚 Continuously learning through online platforms & self-study\n\nShe's just getting started — big things are coming! 🌟"
+    },
+    {
+        keys: ['interest','hobby','hobbies','like','love','passion','enjoy'],
+        answer: "❤️ Milithi's Interests & Passions:\n\n🌐 Web Development — Creating beautiful, functional websites\n☕ Java & OOP — Building structured, logical systems\n🐍 Python — Scripting and automation\n🎨 UI/UX Design — Crafting amazing user experiences\n📚 Adaptive Learning — Always exploring new technologies!\n\nShe truly loves what she does! 💜"
+    },
+    {
+        keys: ['location','country','where','live','from','sri lanka'],
+        answer: "📍 Milithi is based in Sri Lanka 🇱🇰\n\nShe's studying and building her tech career right here, with big dreams for the future! 🌏"
+    },
+    {
+        keys: ['hello','hi','hey','good morning','good afternoon','good evening','sup','whats up','greet'],
+        answer: "👋 Hello there! Great to meet you!\n\nI'm Milithi's AI Assistant. I can tell you all about:\n💻 Her Skills\n🎓 Her Education\n🚀 Her Projects\n🏆 Her Certifications\n📬 How to Contact Her\n\nWhat would you like to know? 😊"
+    },
+    {
+        keys: ['thank','thanks','awesome','great','cool','nice','wow','amazing'],
+        answer: "😊 You're welcome! It's my pleasure to help!\n\nIs there anything else you'd like to know about Milithi? Feel free to ask! 💜"
+    },
+    {
+        keys: ['bye','goodbye','see you','later','cya'],
+        answer: "👋 Goodbye! Thanks for visiting Milithi's portfolio!\n\nHave a wonderful day and don't hesitate to come back anytime! 💜✨"
+    },
+    {
+        keys: ['future','goal','plan','dream','aspire'],
+        answer: "🌟 Milithi's Future Goals:\n\n🚀 Become a Full-Stack Developer\n🤖 Explore AI & Machine Learning\n🌐 Build impactful web applications\n💡 Contribute to innovative tech projects\n\nShe's on an exciting journey and the best is yet to come! ✨"
+    }
+];
+
+function getBotReply(input) {
+    var text = input.toLowerCase().trim();
+    var bestMatch = null;
+    var bestScore = 0;
+    KB.forEach(function(item) {
+        var score = 0;
+        item.keys.forEach(function(key) {
+            if (text.includes(key)) score++;
+        });
+        if (score > bestScore) {
+            bestScore = score;
+            bestMatch = item;
+        }
+    });
+    if (bestMatch && bestScore > 0) {
+        return bestMatch.answer;
+    }
+    return "🤔 Hmm, I'm not sure about that! But I can tell you about:\n\n💻 Milithi's Skills\n🎓 Her Education\n🏆 Her Certifications\n🚀 Her Projects\n📬 How to Contact Her\n\nJust ask me about any of these topics! 😊";
+}
+
+function toggleChatbot() {
+    chatOpen = !chatOpen;
+    var c = document.getElementById('chatbot');
+    var icon = document.getElementById('fabIcon');
+    var fab = document.getElementById('chatFab');
+    c.classList.toggle('chatbot-open', chatOpen);
+    icon.className = chatOpen ? 'fas fa-times' : 'fas fa-comments';
+    fab.classList.toggle('fab-active', chatOpen);
+}
+
+function quickReply(text) {
+    document.getElementById('userInput').value = text;
+    sendMessage();
+}
+
+function handleKeyPress(e) {
+    if (e.key === 'Enter') sendMessage();
+}
+
+function sendMessage() {
+    var input = document.getElementById('userInput');
+    var text = input.value.trim();
+    if (!text) return;
+
+    var mc = document.getElementById('chatMessages');
+
+    var u = document.createElement('div');
+    u.className = 'cb-msg cb-user';
+    u.innerHTML = '<div class="cb-bubble">' + escapeHtml(text) + '</div>';
+    mc.appendChild(u);
+    input.value = '';
+    mc.scrollTop = mc.scrollHeight;
+
+    var typing = document.createElement('div');
+    typing.className = 'cb-msg cb-ai';
+    typing.innerHTML = '<div class="cb-bubble cb-typing"><span></span><span></span><span></span></div>';
+    mc.appendChild(typing);
+    mc.scrollTop = mc.scrollHeight;
+
+    setTimeout(function() {
+        typing.remove();
+        var reply = getBotReply(text);
+        var ai = document.createElement('div');
+        ai.className = 'cb-msg cb-ai';
+        var formatted = escapeHtml(reply).replace(/\n/g, '<br>');
+        ai.innerHTML = '<div class="cb-bubble">' + formatted + '</div>';
+        mc.appendChild(ai);
+        mc.scrollTop = mc.scrollHeight;
+    }, 700 + Math.random() * 400);
+}
+
+function escapeHtml(t) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(t));
+    return d.innerHTML;
+}
+
+// ═══════════════ CV DOWNLOAD ═══════════════
+function downloadCV() {
+    var a = document.createElement('a');
+    a.href = 'Milithi_Nethmini_CV.pdf';
+    a.download = 'Milithi_Nethmini_CV.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
+</body>
+</html>
